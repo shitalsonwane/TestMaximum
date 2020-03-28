@@ -27,4 +27,10 @@ public class TestMaximun {
         Float max = maximum.maximumFloat(5.2f, 2.5f, 3.6f);
         Assert.assertEquals((Float) 5.2f, max);
     }
+    @Test
+    public void givenFloats_WhenMaxAtTwo_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun();
+        Float max = maximum.maximumFloat(2.2f, 5.5f, 3.6f);
+        Assert.assertEquals((Float) 5.5f, max);
+    }
 }
