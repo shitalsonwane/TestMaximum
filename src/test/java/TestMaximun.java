@@ -21,4 +21,10 @@ public class TestMaximun {
         int maxInteger=maximun.maximumInteger(2,1,5);
         Assert.assertEquals(5,maxInteger);
     }
+    @Test
+    public void givenFloats_WhenMaxAtOne_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun();
+        Float max = maximum.maximumFloat(5.2f, 2.5f, 3.6f);
+        Assert.assertEquals((Float) 5.2f, max);
+    }
 }
