@@ -9,4 +9,10 @@ public class TestMaximun {
         int maxInteger=maximun.maximumInteger(5,2,3);
         Assert.assertEquals(5,maxInteger);
     }
+    @Test
+    public void givenIntegers_WhenMaxAtTwo_ReturnMaximum(){
+        FindMaximun maximun=new FindMaximun();
+        int maxInteger=maximun.maximumInteger(2,5,3);
+        Assert.assertEquals(5,maxInteger);
+    }
 }
