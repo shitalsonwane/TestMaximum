@@ -33,4 +33,10 @@ public class TestMaximun {
         Float max = maximum.maximumFloat(2.2f, 5.5f, 3.6f);
         Assert.assertEquals((Float) 5.5f, max);
     }
+    @Test
+    public void givenFloats_WhenMaxAtThree_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun();
+        Float max = maximum.maximumFloat(2.2f, 3.5f, 5.6f);
+        Assert.assertEquals((Float) 5.6f, max);
+    }
 }
