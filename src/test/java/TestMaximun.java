@@ -45,5 +45,11 @@ public class TestMaximun {
         String maxString=maximun.maximumString("9","3","5");
         Assert.assertEquals("9",maxString);
     }
+    @Test
+    public void givenString_WhenMaxATwo_ReturnMaximum(){
+        FindMaximun maximun=new FindMaximun();
+        String maxString=maximun.maximumString("3","9","5");
+        Assert.assertEquals("9",maxString);
+    }
 
 }
