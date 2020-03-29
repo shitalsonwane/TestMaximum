@@ -3,27 +3,9 @@ public class FindMaximun {
     {
         System.out.printf("Welcome To Test Maximum Problem");
     }
-    public static Integer maximumInteger(Integer firstValue,Integer secondValue,Integer thirdvalue)
+    public static <E extends Comparable>E checkMaximun(E firstValue,E secondValue,E thirdvalue)
     {
-        Integer maximumValue=firstValue;
-        if(secondValue.compareTo(maximumValue)>0)
-            maximumValue=secondValue;
-        if (thirdvalue.compareTo(maximumValue)>0)
-            maximumValue=thirdvalue;
-        return maximumValue;
-    }
-    public static Float maximumFloat(Float firstValue,Float secondValue,Float thirdvalue)
-    {
-        Float maximumValue=firstValue;
-        if(secondValue.compareTo(maximumValue)>0)
-            maximumValue=secondValue;
-        if (thirdvalue.compareTo(maximumValue)>0)
-            maximumValue=thirdvalue;
-        return maximumValue;
-    }
-    public static String maximumString(String firstValue,String secondValue,String thirdvalue)
-    {
-        String maximumValue=firstValue;
+        E maximumValue=firstValue;
         if(secondValue.compareTo(maximumValue)>0)
             maximumValue=secondValue;
         if (thirdvalue.compareTo(maximumValue)>0)
