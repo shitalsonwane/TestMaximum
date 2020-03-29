@@ -2,60 +2,59 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestMaximun {
-    //when max number at position one
+    //when max int number at position one
     @Test
-    public void givenIntegers_WhenMaxAtOne_ReturnMaximum(){
-        FindMaximun maximun=new FindMaximun();
-        int maxInteger=maximun.checkMaximun(5,2,3);
-        Assert.assertEquals(5,maxInteger);
+    public void givenIntegers_WhenMaxAtOne_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun(10, 5, 2);
+        Integer max = (Integer) maximum.checkMaximun();
+        Assert.assertEquals((Integer) 10, max);
     }
-    @Test
-    public void givenIntegers_WhenMaxAtTwo_ReturnMaximum(){
-        FindMaximun maximun=new FindMaximun();
-        int maxInteger=maximun.checkMaximun(2,5,3);
-        Assert.assertEquals(5,maxInteger);
+    @Test     //when max int number at position Two
+    public void givenIntegers_WhenMaxAtTwo_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun(1, 10, 2);
+        Integer max = (Integer) maximum.checkMaximun();
+        Assert.assertEquals((Integer) 10, max);
     }
-    @Test
-    public void givenIntegers_WhenMaxAtThree_ReturnMaximum(){
-        FindMaximun maximun=new FindMaximun();
-        int maxInteger=maximun.checkMaximun(2,1,5);
-        Assert.assertEquals(5,maxInteger);
+    @Test     //when max int number at position Three
+    public void givenIntegers_WhenMaxAtThree_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun(1, 10, 22);
+        Integer max = (Integer) maximum.checkMaximun();
+        Assert.assertEquals((Integer) 22, max);
     }
-    @Test
-    public void givenFloats_WhenMaxAtOne_ReturnMaximum() {
-        FindMaximun maximum = new FindMaximun();
-        Float max = maximum.checkMaximun(5.2f, 2.5f, 3.6f);
+    @Test     //when float max number at position one
+    public void givenFloat_WhenMaxAtOne_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun(5.2f, 2.5f, 3.6f);
+        Float max = (Float) maximum.checkMaximun();
         Assert.assertEquals((Float) 5.2f, max);
     }
-    @Test
-    public void givenFloats_WhenMaxAtTwo_ReturnMaximum() {
-        FindMaximun maximum = new FindMaximun();
-        Float max = maximum.checkMaximun(2.2f, 5.5f, 3.6f);
-        Assert.assertEquals((Float) 5.5f, max);
+    @Test   //when float max number at position Two
+    public void givenFloat_WhenMaxAtTwo_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun(5.2f, 10.5f, 3.6f);
+        Float max = (Float) maximum.checkMaximun();
+        Assert.assertEquals((Float) 10.5f, max);
     }
-    @Test
-    public void givenFloats_WhenMaxAtThree_ReturnMaximum() {
-        FindMaximun maximum = new FindMaximun();
-        Float max = maximum.checkMaximun(2.2f, 3.5f, 5.6f);
-        Assert.assertEquals((Float) 5.6f, max);
+    @Test       //when float max number at position Three
+    public void givenFloat_WhenMaxAtThree_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun(5.2f, 2.5f, 13.6f);
+        Float max = (Float) maximum.checkMaximun();
+        Assert.assertEquals((Float) 13.6f, max);
     }
-    @Test
-    public void givenString_WhenMaxAtOne_ReturnMaximum(){
-        FindMaximun maximum=new FindMaximun();
-        String maxString=maximum.checkMaximun("9","3","5");
-        Assert.assertEquals("9",maxString);
+    @Test       //when string max number at position one
+    public void givenString_WhenMaxAtOne_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun("saraswati", "ganga", "kaveri");
+        String max = (String) maximum.checkMaximun();
+        Assert.assertEquals((String) "saraswati", max);
     }
-    @Test
-    public void givenString_WhenMaxATwo_ReturnMaximum(){
-        FindMaximun maximum=new FindMaximun();
-        String maxString=maximum.checkMaximun("3","9","5");
-        Assert.assertEquals("9",maxString);
+    @Test      //when string max number at position two
+    public void givenString_WhenMaxAtTwo_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun("ganga", "saraswati", "kaveri");
+        String max = (String) maximum.checkMaximun();
+        Assert.assertEquals((String) "saraswati", max);
     }
-    @Test
-    public void givenString_WhenMaxAThree_ReturnMaximum(){
-        FindMaximun maximum=new FindMaximun();
-        String maxString=maximum.checkMaximun("3","5","9");
-        Assert.assertEquals("9",maxString);
+    @Test   //when string max number at position three
+    public void givenString_WhenMaxAtThree_ReturnMaximum() {
+        FindMaximun maximum = new FindMaximun("kaveri", "ganga", "saraswati");
+        String max = (String) maximum.checkMaximun();
+        Assert.assertEquals((String) "saraswati", max);
     }
-
 }
