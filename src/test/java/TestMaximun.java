@@ -39,4 +39,11 @@ public class TestMaximun {
         Float max = maximum.maximumFloat(2.2f, 3.5f, 5.6f);
         Assert.assertEquals((Float) 5.6f, max);
     }
+    @Test
+    public void givenString_WhenMaxAtOne_ReturnMaximum(){
+        FindMaximun maximun=new FindMaximun();
+        String maxString=maximun.maximumString("9","3","5");
+        Assert.assertEquals("9",maxString);
+    }
+
 }

@@ -21,4 +21,13 @@ public class FindMaximun {
             maximumValue=thirdvalue;
         return maximumValue;
     }
+    public static String maximumString(String firstValue,String secondValue,String thirdvalue)
+    {
+        String maximumValue=firstValue;
+        if(secondValue.compareTo(maximumValue)>0)
+            maximumValue=secondValue;
+        if (thirdvalue.compareTo(maximumValue)>0)
+            maximumValue=thirdvalue;
+        return maximumValue;
+    }
 }
