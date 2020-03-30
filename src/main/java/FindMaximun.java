@@ -1,28 +1,24 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class FindMaximun<E extends Comparable> {
     public static void main(String args[])
     {
         System.out.printf("Welcome To Test Maximum Problem");
     }
-    E firstValue;
-    E secondValue;
-    E thirdvalue;
+    E[] array;
     // parameter constructor
-    public FindMaximun(E firstValue,E secondValue,E thirdvalue) {
-        this.firstValue=firstValue;
-        this.secondValue=secondValue;
-        this.thirdvalue=thirdvalue;
+    public FindMaximun(E[] array) {
+        this.array=array;
     }
     //function for check max
-    public static <E extends Comparable> E checkMaximun(E firstValue,E secondValue,E thirdvalue)
+    public static <E extends Comparable> E checkMaximun(E... array )
     {
-        E maximumValue=firstValue;
-        if(secondValue.compareTo(maximumValue)>0)
-            maximumValue=secondValue;
-        if (thirdvalue.compareTo(maximumValue)>0)
-            maximumValue=thirdvalue;
-        return maximumValue;
+        Arrays.sort(array);
+        return array[array.length-1];
     }
+    //overwrite the method for parameter initialtion
     public E checkMaximun(){
-        return checkMaximun(firstValue,secondValue,thirdvalue);
+        return checkMaximun(array);
     }
 }
