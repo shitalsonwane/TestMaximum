@@ -2,8 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestMaximun {
-    //when max int number at position one
-    @Test
+    @Test       //when max int number at position one
     public void givenIntegers_WhenMaxAtOne_ReturnMaximum() {
         Integer max = FindMaximun.checkMaximun(10,5,2);
         Assert.assertEquals((Integer) 10, max);
